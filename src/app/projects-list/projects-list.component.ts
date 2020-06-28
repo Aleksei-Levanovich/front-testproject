@@ -8,12 +8,12 @@ import {Project} from "../Project";
   styleUrls: ['./projects-list.component.css']
 })
 export class ProjectsListComponent implements OnInit {
-  projects : Project;
+  projects : Project[];
 
   constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get<any>('https://aqueous-scrubland-05247.herokuapp.com/project/').subscribe((data:Project) => this.projects=data);
+    this.http.get<Project[]>('https://aqueous-scrubland-05247.herokuapp.com/project/');
   }
 
 }
