@@ -1,3 +1,14 @@
-<div>
-  {{projects[0].name}}
+<div *ngFor="let project of projects;">
+  {{project.name}}
+  <div *ngFor="let todo of project.todos">
+    <div *ngIf="todo.isCompleted">
+      <input type="checkbox" [value]="todo.id" on-click="patchProject(todo.id, todo.project_id)" checked/>
+      {{todo.text}}
+    </div>
+    <div *ngIf="!todo.isCompleted">
+      <input type="checkbox" [value]="todo.id" on-click="patchProject(todo.id, todo.project_id)"/>
+      {{todo.text}}
+    </div>
+  </div>
+  <br>
 </div>
