@@ -3,12 +3,27 @@
   <div *ngFor="let todo of project.todos">
     <div *ngIf="todo.isCompleted">
       <input type="checkbox" [value]="todo.id" on-click="patchProject(todo.id, todo.project_id)" checked/>
-      {{todo.text}}
+      <del>{{todo.text}}</del>
     </div>
     <div *ngIf="!todo.isCompleted">
       <input type="checkbox" [value]="todo.id" on-click="patchProject(todo.id, todo.project_id)"/>
       {{todo.text}}
     </div>
   </div>
+  <div *ngIf="current==project.id">
+    <form [formGroup]="addTodo">
+      <label>Enter the name of the Todo: </label> <input name="text" formControlName="text"/>
+      <input type="button" on-click="postTodo()" value="Save">
+    </form>
+  </div>
+  <button on-click="popup(project.id)">Add new task</button>
   <br>
+</div>
+<button on-click="popup(0)">Add new project</button>
+<div *ngIf="current==0">
+  <form [formGroup]="addTodo">
+    <label>Enter the name of the List: </label><input name="name" formControlName="name"/><br>
+    <label>Enter the name of the Todo: </label><input name="text" formControlName="text"/><br>
+    <input type="button" on-click="postTodo()" value="Save">
+  </form>
 </div>
