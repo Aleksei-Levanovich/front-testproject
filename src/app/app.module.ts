@@ -12,7 +12,7 @@ import {MatFormFieldModule} from "@angular/material/form-field";
 
 
 import 'hammerjs';
-
+import {FlexModule} from "@angular/flex-layout";
 
 @NgModule({
   declarations: [
@@ -26,7 +26,8 @@ import 'hammerjs';
     ReactiveFormsModule,
     MatButtonModule,
     MatInputModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FlexModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
