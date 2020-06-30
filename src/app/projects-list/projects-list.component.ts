@@ -4,6 +4,9 @@ import {Project} from "../Project";
 import {plainToClass} from "class-transformer";
 import {Todo} from "../Todo";
 import {FormControl, FormGroup} from "@angular/forms";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MatButtonModule} from "@angular/material/button";
+import {FlexLayoutModule} from "@angular/flex-layout";
 
 
 @Component({
