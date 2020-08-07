@@ -22,7 +22,7 @@
     "@angular/platform-browser": "~10.0.0",
     "@angular/platform-browser-dynamic": "~10.0.0",
     "@angular/router": "~10.0.0",
-    "class-transformer": "^0.2.3",
+    "class-transformer": "^0.3.1",
     "es6-shim": "^0.35.5",
     "express": "^4.17.1",
     "reflect-metadata": "^0.1.13",
